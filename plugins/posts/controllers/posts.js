@@ -1,4 +1,5 @@
-'use strict';
+"use strict";
+const axios = require("axios");
 
 /**
  * posts.js controller
@@ -7,7 +8,6 @@
  */
 
 module.exports = {
-
   /**
    * Default action.
    *
@@ -15,11 +15,9 @@ module.exports = {
    */
 
   index: async (ctx) => {
-    // Add your own logic here.
-
-    // Send 200 `ok`
-    ctx.send({
-      message: 'ok'
-    });
-  }
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/posts"
+    );
+    return response.data;
+  },
 };
