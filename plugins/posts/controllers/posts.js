@@ -15,9 +15,7 @@ module.exports = {
    */
 
   index: async (ctx) => {
-    const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts"
-    );
+    const response = await axios.get(`${process.env.JSON_FAKE_API}/posts`);
     return response.data;
   },
 };
