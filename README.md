@@ -1,3 +1,16 @@
-# Strapi application
+# Strapi local plugin
 
-A quick description of your strapi application
+- Local plugin `posts` to display posts fetched from JSONPlaceholder API
+
+# Install dependencies
+
+```
+yarn add @buffetjs/core @buffetjs/custom
+```
+
+# Start dev server
+
+```
+yarn build
+yarn develop
+```
